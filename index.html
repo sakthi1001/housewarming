@@ -3,6 +3,7 @@
 <head>
   <title>🏡 Housewarming Ceremony 🏡</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|REM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       background-image: url('background.jpg');
@@ -11,26 +12,18 @@
       background-attachment: fixed;
       margin: 0;
       padding: 0;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
       overflow: hidden;
-    }
-    h1 {
-	font-family: 'Dancing Script', cursive;
-	font-weight: bold;
-	font-style: normal;
-	font-size: 50px;
-	margin: 15px 0;
-	color: #674ea7;
     }
     .invitation-card {
       background-image: url('card.jpg');
       background-size: cover;
       background-position: center;
       width: 40%;
-      height: 95%;
+      height: 100%;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       display: flex;
@@ -42,44 +35,86 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
+    .home-image {  
+      max-width: 100%; /* Make the image responsive */
+      height: auto;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-weight: bold;
+      font-style: normal;
+      font-size: 50px;
+      margin: 0;
+      color: #674ea7;
+    }
     .invitation-heading {
       font-size: 36px;
       font-weight: bold;
-      color: #FF5349; /* Bright orange tulip red color */
-      margin-bottom: 10px;
+      color: #FF5349;
+      margin: 10px 0;
       font-family: 'REM', serif;
     }
     .Date-time {
       font-size: 24px;
       font-weight: bold;
-      color: #353333; 
+      color: #353333;
       font-family: 'Courier New', Monospace;
     }
     .Address {
       font-size: 24px;
       font-weight: bold;
-      color: #464443; /* Bright orange tulip red color */
+      color: #464443;
       margin-bottom: 5px;
       font-family: 'Tangerine', serif;
     }
     .actions {
-	display: flex;
-	font-size: 12px;
-	letter-spacing: 0pt;
+      display: flex;
+      font-size: 12px;
+      letter-spacing: 0pt;
+      margin-top: 15px;
+    }
+
+    /* Adjustments for smaller screens */
+    @media only screen and (max-width: 600px) {
+      body {
+        background-size: contain;
+        overflow: auto;
+      }
+      .invitation-card {
+        width: 80%;
+        padding: 10px;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      .invitation-heading {
+        font-size: 24px;
+      }
+      .Date-time {
+        font-size: 18px;
+      }
+      .Address {
+        font-size: 18px;
+      }
+      .actions {
+        font-size: 10px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="invitation-card">
+    <img class="home-image" src="home.png" alt="Home Image">
     <h1>Welcome to our New Home</h1> 
     <p class="invitation-heading">We are Inviting you to warm our New Home with laughter</p> 
     <br>
-    <p class = 'Date-time'>SUNDAY, AUGUST 20TH <br>FROM 6AM TO 10AM</p>
-    <p class = 'Address'>Address: Flat F1, First Floor,<br> Srivari Apartments, Srivari Nagar, <br>Guduvancheri</p>
+    <p class="Date-time">SUNDAY, AUGUST 20TH <br>FROM 6AM TO 10AM</p>
+    <p class="Address">Address: Flat F1, First Floor,<br> Srivari Apartments, Srivari Nagar, <br>Guduvancheri</p>
     <div class="actions">
-        <a href="https://goo.gl/maps/63DejF95MU7AjbEM6" target="_blank">
-            <div class="venue">SEE THE VENUE</div>
-        </a>
+      <a href="https://goo.gl/maps/63DejF95MU7AjbEM6" target="_blank">
+        <div class="venue">SEE THE VENUE</div>
+      </a>
     </div>
   </div>
 </body>
